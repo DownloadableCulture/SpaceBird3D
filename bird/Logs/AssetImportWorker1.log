@@ -192,3 +192,131 @@ Unloading 6085 unused Assets / (6.3 MB). Loaded Objects now: 6737.
 Memory consumption went from 132.8 MB to 126.5 MB.
 Total: 8.500900 ms (FindLiveObjects: 0.564100 ms CreateObjectMapping: 0.539900 ms MarkObjects: 4.439100 ms  DeleteObjects: 2.956700 ms)
 
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  2.501 seconds
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.783 seconds
+Domain Reload Profiling: 3282ms
+	BeginReloadAssembly (426ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (59ms)
+	RebuildCommonClasses (162ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (1857ms)
+		LoadAssemblies (2002ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (163ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (136ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (783ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (561ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (139ms)
+			ProcessInitializeOnLoadAttributes (360ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 1.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6081 unused Assets / (6.1 MB). Loaded Objects now: 6754.
+Memory consumption went from 143.0 MB to 136.9 MB.
+Total: 10.054600 ms (FindLiveObjects: 1.018700 ms CreateObjectMapping: 0.912200 ms MarkObjects: 4.168800 ms  DeleteObjects: 3.953700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 749746.468233 seconds.
+  path: Assets/Starfield Skybox/Demo/Textures/Back_Tex.png
+  artifactKey: Guid(b692a498a0379a341872703d288b04af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Starfield Skybox/Demo/Textures/Back_Tex.png using Guid(b692a498a0379a341872703d288b04af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '25bde7604817087fd612bd852739dbc7') in 0.1220533 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Starfield Skybox/Demo/Textures/Right_Tex.png
+  artifactKey: Guid(411c36f0804e8c248a3f6470ca50cd85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Starfield Skybox/Demo/Textures/Right_Tex.png using Guid(411c36f0804e8c248a3f6470ca50cd85) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5397e88705c841fa323631a56b4ede2a') in 0.0303638 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Starfield Skybox/Demo/Textures/Up_Tex.png
+  artifactKey: Guid(8313f24c5bda59240aabef5e6c46f9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Starfield Skybox/Demo/Textures/Up_Tex.png using Guid(8313f24c5bda59240aabef5e6c46f9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ebbe600824b18f453f5b57e7338274be') in 0.0375066 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 236.524003 seconds.
+  path: Assets/VoodooPlay/Models/Materials/Drone_HeightMap.png
+  artifactKey: Guid(e6a2eb6ad0d99f14d81094a17b32ffdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VoodooPlay/Models/Materials/Drone_HeightMap.png using Guid(e6a2eb6ad0d99f14d81094a17b32ffdf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd050766b2b63a5c8cd4f0f445d0b8b5a') in 0.0218435 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/VoodooPlay/Models/Materials/Drone_Specular.tga
+  artifactKey: Guid(9c5ae50bf53b6494e825ab0b7161e42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VoodooPlay/Models/Materials/Drone_Specular.tga using Guid(9c5ae50bf53b6494e825ab0b7161e42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'beaad68a3eb965b1db257c1fcd9b31fe') in 0.0179717 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.702352 seconds.
+  path: Assets/VoodooPlay/Prefab/Drone.prefab
+  artifactKey: Guid(6bb72f8fa50f23842a690a519e7fdd08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VoodooPlay/Prefab/Drone.prefab using Guid(6bb72f8fa50f23842a690a519e7fdd08) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cc433ff91a55214791443c7d8f558912') in 0.4763886 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 22
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/VoodooPlay/Models/Drone/Materials/Drone_Albedo.mat
+  artifactKey: Guid(be59193327f1a424d900587606468a25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VoodooPlay/Models/Drone/Materials/Drone_Albedo.mat using Guid(be59193327f1a424d900587606468a25) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bdd472591283184e28fc1e0ccf8beafc') in 3.6555436 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/VoodooPlay/Models/Materials/Drone_Occlusion.png
+  artifactKey: Guid(a85419c7c384aef45b483775a3636aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VoodooPlay/Models/Materials/Drone_Occlusion.png using Guid(a85419c7c384aef45b483775a3636aa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c3a5013761310e09828ea4e08cbb8c74') in 0.0180468 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/VoodooPlay/Models/Materials/Drone_Albedo.png
+  artifactKey: Guid(7526a412b323ee34282f01164a641d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/VoodooPlay/Models/Materials/Drone_Albedo.png using Guid(7526a412b323ee34282f01164a641d7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9e1c59ec4d66ef95bc8d5efd6312b59a') in 0.0174027 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
