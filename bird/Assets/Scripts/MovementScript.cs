@@ -1,11 +1,15 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MovementScript : MonoBehaviour
 {
+    public InputActionReference Steer;
+    public InputActionReference Boost;
     public float push = 20f;
     public float rotationSpeed = 100f;
     
     private Rigidbody rb;
+    private Vector2 rotation;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,38 +21,34 @@ public class MovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        rotation = Steer.action.ReadValue<Vector2>();
+
+
         //forward and up
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Boost.action.WasPerformedThisFrame())
         {
             rb.AddForce(transform.forward * push, ForceMode.Impulse);
-            rb.AddForce(transform.up * push, ForceMode.Impulse);
+            rb.AddForce(transform.up * push/4, ForceMode.Impulse);
         }
 
-        // rotate right
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            rb.AddTorque(Vector3.up * rotationSpeed * Time.deltaTime, ForceMode.VelocityChange);
-        }
 
-        // rotate left
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if(rotation != Vector2.zero)
         {
-            rb.AddTorque(-Vector3.up * rotationSpeed * Time.deltaTime, ForceMode.VelocityChange);
+            //left and right
+            rb.AddTorque(transform.up * rotation.x * rotationSpeed * Time.deltaTime, ForceMode.VelocityChange);
+            //up and down
+            rb.AddTorque(-transform.right * rotation.y * rotationSpeed * Time.deltaTime, ForceMode.VelocityChange);
         }
-        // rotate left
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            rb.AddTorque(-Vector3.up * rotationSpeed * Time.deltaTime, ForceMode.VelocityChange);
-        }
-        // rotate up
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-            rb.AddTorque(-Vector3.right * rotationSpeed * Time.deltaTime, ForceMode.VelocityChange);
-        }
-        // rotate down
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-            rb.AddTorque(Vector3.right * rotationSpeed * Time.deltaTime, ForceMode.VelocityChange);
-        }
+    }
+    private void OnEnable()
+    {
+        Steer.action.Enable();
+        Boost.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        Steer.action.Disable();
+        Boost.action.Disable();
     }
 }
