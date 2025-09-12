@@ -7,9 +7,11 @@ public class MovementScript : MonoBehaviour
     public InputActionReference Boost;
     public float push = 20f;
     public float rotationSpeed = 100f;
+    public ParticleSystem boostParticles;
     
     private Rigidbody rb;
     private Vector2 rotation;
+    private bool isBoosting;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,13 +29,26 @@ public class MovementScript : MonoBehaviour
         //forward and up
         if (Boost.action.WasPerformedThisFrame())
         {
+
+            if (!isBoosting)
+            {
+                boostParticles?.Play();
+                isBoosting = true;
+            }
             rb.AddForce(transform.forward * push, ForceMode.Impulse);
-            rb.AddForce(transform.up * push/4, ForceMode.Impulse);
+            rb.AddForce(transform.up * push / 4, ForceMode.Impulse);
             rb.useGravity = true;
         }
+        else
+        {
+            if (isBoosting)
+            {
+                boostParticles?.Stop();
+                isBoosting = false;
+            }
 
-
-        if(rotation != Vector2.zero)
+        }
+        if (rotation != Vector2.zero)
         {
             //left and right
             rb.AddTorque(transform.up * rotation.x * rotationSpeed * Time.deltaTime, ForceMode.VelocityChange);
