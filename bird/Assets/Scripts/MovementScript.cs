@@ -29,6 +29,7 @@ public class MovementScript : MonoBehaviour
         {
             rb.AddForce(transform.forward * push, ForceMode.Impulse);
             rb.AddForce(transform.up * push/4, ForceMode.Impulse);
+            rb.useGravity = true;
         }
 
 
