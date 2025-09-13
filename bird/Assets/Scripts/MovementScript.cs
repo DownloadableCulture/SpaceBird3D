@@ -7,7 +7,7 @@ public class MovementScript : MonoBehaviour
     public InputActionReference Boost;
     public float push = 20f;
     public float rotationSpeed = 100f;
-    public ParticleSystem boostParticles;
+    //public ParticleSystem boostParticles;
     
     private Rigidbody rb;
     private Vector2 rotation;
@@ -32,7 +32,7 @@ public class MovementScript : MonoBehaviour
 
             if (!isBoosting)
             {
-                boostParticles?.Play();
+                //boostParticles?.Play();
                 isBoosting = true;
             }
             rb.AddForce(transform.forward * push, ForceMode.Impulse);
@@ -43,7 +43,7 @@ public class MovementScript : MonoBehaviour
         {
             if (isBoosting)
             {
-                boostParticles?.Stop();
+                //boostParticles?.Stop();
                 isBoosting = false;
             }
 

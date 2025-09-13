@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class checkpoint_collision : MonoBehaviour
 {
-    public int Checkpoints;
+    public int Checkpoints {get; private set;}
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
