@@ -24,6 +24,8 @@ public class MovementScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (MainMenuController.Instance != null && MainMenuController.Instance.MenuVisible)
+            return;
         rotation = Steer.action.ReadValue<Vector2>();
 
 

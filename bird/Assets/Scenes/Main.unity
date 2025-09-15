@@ -1824,6 +1824,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0312a575a64809e47aec7740e578ca62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pause: {fileID: -4642148007252002909, guid: 31bca9444fed40049b4b83a1e9c475b1, type: 3}
+  Submit: {fileID: -4326742136740729511, guid: 31bca9444fed40049b4b83a1e9c475b1, type: 3}
+  Navigate: {fileID: -7080064211662806119, guid: 31bca9444fed40049b4b83a1e9c475b1, type: 3}
+  timeLerpSpeed: 2
 --- !u!1001 &1458294912
 PrefabInstance:
   m_ObjectHideFlags: 0

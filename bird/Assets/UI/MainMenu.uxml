@@ -2,7 +2,9 @@
     <Style src="project://database/Assets/UI/main-menu.uss?fileID=7433441132597879392&amp;guid=274704f2f98a24a4aa76d96533b14554&amp;type=3#main-menu" />
     <ui:VisualElement name="Panel" class="panel" style="flex-grow: 1; align-items: center;">
         <ui:VisualElement name="Container" class="menu" style="flex-grow: 1; align-items: stretch; width: 511px; align-content: auto; justify-content: center; height: 700px; min-height: auto; max-height: 700px; flex-direction: column; position: relative; top: 15%; bottom: 0%; background-color: rgba(143, 151, 172, 0.12); opacity: 1; align-self: auto; border-top-width: 20px; border-right-width: 20px; border-bottom-width: 20px; border-left-width: 20px; border-top-left-radius: 50px; border-top-right-radius: 50px; border-bottom-right-radius: 50px; border-bottom-left-radius: 50px; -unity-text-align: middle-left; right: 0%;">
+            <ui:Label text="Space Bird 3D" style="font-size: 60px; justify-content: flex-start; color: rgb(4, 182, 163); -unity-font-style: bold; -unity-text-align: upper-left; -unity-text-outline-width: 10px; -unity-text-outline-color: rgb(126, 116, 131); rotate: 0; scale: 1 1;" />
             <ui:Button text="Start" name="StartButton" style="height: 188px; justify-content: space-between; align-items: auto; align-content: auto; -unity-text-align: middle-center; -unity-font-style: bold; color: rgba(224, 208, 208, 0.93); font-size: 60px;" />
+            <ui:Button text="Quit" name="QuitButton" style="align-items: flex-start; justify-content: center; align-self: auto; font-size: 60px; -unity-font-style: bold; color: rgb(156, 126, 133); height: 188px;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
