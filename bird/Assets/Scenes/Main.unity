@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 53958437}
   - component: {fileID: 53958436}
   - component: {fileID: 53958435}
+  - component: {fileID: 53958438}
   m_Layer: 0
   m_Name: Music Manager
   m_TagString: Untagged
@@ -248,6 +249,22 @@ MonoBehaviour:
   FadeSpeed: 1
   TargetVolume: 1
   CheckPointTrigger: 3
+--- !u!114 &53958438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53958431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e78647207fc47242b37e6bf25712a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MenubgmSource: {fileID: 1228743519}
+  GamebgmSource: {fileID: 1825163545}
+  FadeSpeed: 0.3
+  TargetVolume: 1
 --- !u!1 &223870657
 GameObject:
   m_ObjectHideFlags: 0
@@ -2187,7 +2204,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: bfa986030e92b2d4ba349259ac4b655c, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
