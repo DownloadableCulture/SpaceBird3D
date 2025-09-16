@@ -40,4 +40,22 @@ public class PlayerData : MonoBehaviour
         }
         
     }
+    public void ResetPlayer()
+    {
+        health = maxHealth;
+        if (updateInterface != null)
+            updateInterface.UpdateHP(health / (int)maxHealth * 100f);
+
+        transform.position = Vector3.zero;
+        transform.rotation = Quaternion.identity;
+
+        //Stop movement
+        Rigidbody rb = GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;       
+            rb.angularVelocity = Vector3.zero;
+            rb.useGravity = false;
+        }
+    }
 }

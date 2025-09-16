@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: ec595975dc086ea4b9a5f3125ba1154c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Steer: {instanceID: 0}
+  - Boost: {instanceID: 0}
+  - boostAudio: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

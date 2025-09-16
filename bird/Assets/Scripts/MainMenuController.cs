@@ -113,7 +113,7 @@ public class MainMenuController : MonoBehaviour
         Navigate.action.Disable();
     }
 
-    public void ShowMenu(string message = "Main Menu", string startButtonText = "Start")
+    public void ShowMenu(string message = "Space Bird 3D", string startButtonText = "Start")
     {
         MenuVisible = true;
 
@@ -161,7 +161,18 @@ public class MainMenuController : MonoBehaviour
 
     private void OnStartButtonClicked(ClickEvent evt)
     {
-        HideMenu();
+        if (_startButton.text == "Try Again?")
+        {
+            PlayerData player = FindFirstObjectByType<PlayerData>();
+            if (player != null)
+                player.ResetPlayer();
+            HideMenu();
+        }
+        else
+        {
+            HideMenu();
+        }
+            
     }
 
     private void OnQuitButtonClicked(ClickEvent evt)
