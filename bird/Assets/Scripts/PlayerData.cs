@@ -3,10 +3,14 @@ using UnityEngine;
 public class PlayerData : MonoBehaviour
 {
     public int health = 5;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public int maxHealth = 5;
+
+    private UpdateInterface updateInterface;
     void Start()
     {
-        
+        updateInterface = FindFirstObjectByType<UpdateInterface>();
+        if (updateInterface != null )
+            updateInterface.UpdateHP(health / (float)maxHealth*100f);
     }
 
     // Update is called once per frame
@@ -21,6 +25,9 @@ public class PlayerData : MonoBehaviour
         {
             health--;
             Debug.Log("Health:" + health);
+
+            if (updateInterface != null)
+                updateInterface.UpdateHP(health / (float)maxHealth * 100f);
         }
     }
 }
