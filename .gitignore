@@ -4,7 +4,8 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
-
+Assets/Starfield Skybox/Demo/Textures/
+Assets/Cobble Games/
 # Visual Studio cache directory
 .vs/
 
