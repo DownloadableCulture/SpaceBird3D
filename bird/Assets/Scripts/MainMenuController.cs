@@ -10,6 +10,7 @@ public class MainMenuController : MonoBehaviour
     public InputActionReference Navigate;
 
     public bool MenuVisible { get; private set; } = true;
+    public GameObject CheckpointParent;
 
     private UIDocument _document;
 
@@ -166,6 +167,9 @@ public class MainMenuController : MonoBehaviour
             PlayerData player = FindFirstObjectByType<PlayerData>();
             if (player != null)
                 player.ResetPlayer();
+
+            ResetCheckpoints();
+
             HideMenu();
         }
         else
@@ -178,6 +182,22 @@ public class MainMenuController : MonoBehaviour
     private void OnQuitButtonClicked(ClickEvent evt)
     {
         QuitGame();
+    }
+    public void ResetCheckpoints()
+    {
+
+
+        foreach (Transform child in CheckpointParent.GetComponentsInChildren<Transform>(true))
+        {
+            if (child.CompareTag("Checkpoint"))
+            {
+                child.gameObject.SetActive(true);
+            }
+        }
+
+        var cpManager = FindFirstObjectByType<checkpoint_collision>();
+        if (cpManager != null)
+            cpManager.CountCheckpoints();
     }
 
 

@@ -10,12 +10,18 @@ public class checkpoint_collision : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint").Length;
-        Debug.Log("Total Checkpoints:" +  Checkpoints); 
-
         checkpointSound = GetComponent<AudioSource>();
-
         updateInterface = FindFirstObjectByType<UpdateInterface>();
+
+        CountCheckpoints();
+
+    }
+
+    public void CountCheckpoints()
+    {
+        Checkpoints = GameObject.FindGameObjectsWithTag("Checkpoint").Length;
+        Debug.Log("Total Checkpoints:" +  Checkpoints);
+
         if (updateInterface != null)
             updateInterface.UpdateCheckpoints(Checkpoints);
     }
@@ -43,7 +49,7 @@ public class checkpoint_collision : MonoBehaviour
             if (updateInterface != null)
                 updateInterface.UpdateCheckpoints(Checkpoints);
 
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
         
     }
