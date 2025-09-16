@@ -20,3 +20,6 @@
 .unity-button:focus {
     background-color: rgba(79, 116, 174, 0.65);
 }
+
+.label {
+}

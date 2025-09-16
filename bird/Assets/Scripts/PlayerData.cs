@@ -29,5 +29,15 @@ public class PlayerData : MonoBehaviour
             if (updateInterface != null)
                 updateInterface.UpdateHP(health / (float)maxHealth * 100f);
         }
+        if(health <= 0)
+        {
+            health = 0;
+
+            if (MainMenuController.Instance != null)
+            {
+                MainMenuController.Instance.ShowMenu("Game Over!", "Try Again?");
+            }
+        }
+        
     }
 }

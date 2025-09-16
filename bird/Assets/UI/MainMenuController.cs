@@ -12,6 +12,8 @@ public class MainMenuController : MonoBehaviour
     public bool MenuVisible { get; private set; } = true;
 
     private UIDocument _document;
+
+    private Label _menuLabel;
     private Button _startButton;
     private Button _quitButton;
     private Button[] _buttons;
@@ -27,6 +29,7 @@ public class MainMenuController : MonoBehaviour
 
         _document = GetComponent<UIDocument>();
 
+        _menuLabel = _document.rootVisualElement.Q<Label>("MenuLabel");
         _startButton = _document.rootVisualElement.Q("StartButton") as Button;
         _quitButton = _document.rootVisualElement.Q("QuitButton") as Button;
 
@@ -110,9 +113,19 @@ public class MainMenuController : MonoBehaviour
         Navigate.action.Disable();
     }
 
-    private void ShowMenu()
+    public void ShowMenu(string message = "Main Menu", string startButtonText = "Start")
     {
         MenuVisible = true;
+
+        if (_menuLabel != null)
+            _menuLabel.text = message;
+
+        if (_startButton != null)
+        {
+            _startButton.style.display = DisplayStyle.Flex;
+            _startButton.text = startButtonText;
+        }
+
         _document.rootVisualElement.style.display = DisplayStyle.Flex;
         StopAllCoroutines();
         StartCoroutine(LerpTimeScale(Time.timeScale, 0f));
