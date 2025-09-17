@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
+using System.Diagnostics;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class MainMenuController : MonoBehaviour
     private int _currentButton;
     private bool canNavigate = true;
     private bool gameStarted;
+    public static Stopwatch _stopwatch = new Stopwatch();
 
     public float timeLerpSpeed = 5f;
     
@@ -192,7 +194,14 @@ public class MainMenuController : MonoBehaviour
         {
             HideMenu();
         }
-            
+
+        if (_startButton.text == "Try Again?" || _startButton.text == "Play Again" || _startButton.text == "Start")
+        {
+            _stopwatch.Reset();
+            _stopwatch.Start();
+        }
+
+
     }
 
     private void OnQuitButtonClicked(ClickEvent evt)
@@ -215,11 +224,12 @@ public class MainMenuController : MonoBehaviour
         if (cpManager != null)
             cpManager.CountCheckpoints();
     }
+   
 
 
     private void QuitGame()
     {
-        Debug.Log("Quit");
+        UnityEngine.Debug.Log("Quit");
         Application.Quit();
 
 #if UNITY_EDITOR
