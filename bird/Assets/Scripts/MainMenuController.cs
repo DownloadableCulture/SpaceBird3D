@@ -20,6 +20,7 @@ public class MainMenuController : MonoBehaviour
     private Button[] _buttons;
     private int _currentButton;
     private bool canNavigate = true;
+    private bool gameStarted;
 
     public float timeLerpSpeed = 5f;
     
@@ -42,6 +43,8 @@ public class MainMenuController : MonoBehaviour
 
         _buttons = new Button[] { _startButton, _quitButton };
         _buttons[_currentButton].Focus();
+
+        gameStarted = false;
 
     }
 
@@ -114,7 +117,7 @@ public class MainMenuController : MonoBehaviour
         Navigate.action.Disable();
     }
 
-    public void ShowMenu(string message = "Space Bird 3D", string startButtonText = "Start")
+    public void ShowMenu(string message = "Space Bird 3D", string startButtonText = "Continue")
     {
         MenuVisible = true;
 
@@ -138,6 +141,7 @@ public class MainMenuController : MonoBehaviour
     private void HideMenu()
     {
         MenuVisible = false;
+        gameStarted = true;
         _document.rootVisualElement.style.display = DisplayStyle.None;
         StopAllCoroutines();
         StartCoroutine(LerpTimeScale(Time.timeScale, 1f));
