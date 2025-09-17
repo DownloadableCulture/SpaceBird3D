@@ -1572,6 +1572,10 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1753189309707400519, guid: 0daf96c15d4c97b4e9e526f6acfce2f0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9b16445ee071e2b428d309cbcfe1089f, type: 2}
     - target: {fileID: 1771377485348030422, guid: 0daf96c15d4c97b4e9e526f6acfce2f0, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -2164,6 +2168,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1185686972}
     m_Modifications:
+    - target: {fileID: 1753189309707400519, guid: 0daf96c15d4c97b4e9e526f6acfce2f0, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d6ad6a2c12e1304fb97f6889573ffd9, type: 2}
     - target: {fileID: 3360166068394803097, guid: 0daf96c15d4c97b4e9e526f6acfce2f0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 414.3669
