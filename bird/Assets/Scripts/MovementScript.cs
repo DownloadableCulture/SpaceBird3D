@@ -8,6 +8,7 @@ public class MovementScript : MonoBehaviour
     public float push = 20f;
     public float rotationSpeed = 100f;
     public AudioSource boostAudio;
+    public EngineGlow engineGlow;
     //public ParticleSystem boostParticles;
     
     private Rigidbody rb;
@@ -37,6 +38,7 @@ public class MovementScript : MonoBehaviour
             {
                 //boostParticles?.Play();
                 isBoosting = true;
+                engineGlow?.BoostTrigger();
             }
             rb.AddForce(transform.forward * push, ForceMode.Impulse);
             rb.AddForce(transform.up * push / 4, ForceMode.Impulse);

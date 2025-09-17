@@ -1839,6 +1839,7 @@ GameObject:
   - component: {fileID: 1223412226}
   - component: {fileID: 1223412225}
   - component: {fileID: 1223412224}
+  - component: {fileID: 1223412227}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1935,6 +1936,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1223412222}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1223412227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223412222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30687d6f08f359947801759215ca376a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sphereRenderer: {fileID: 1223412225}
+  lowG: 0.078431375
+  highG: 0.42352942
+  fadeSpeed: 0.4
 --- !u!1 &1228743517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2956,6 +2973,7 @@ MonoBehaviour:
   push: 20
   rotationSpeed: 2
   boostAudio: {fileID: 2145106989}
+  engineGlow: {fileID: 1223412227}
 --- !u!114 &2145106985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3273,7 +3291,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 9960739b5b97c8e4581e9b37bfde415d, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
