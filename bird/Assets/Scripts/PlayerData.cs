@@ -4,6 +4,7 @@ public class PlayerData : MonoBehaviour
 {
     public int health = 5;
     public int maxHealth = 5;
+    public AudioSource damageSound;
 
     private UpdateInterface updateInterface;
     void Start()
@@ -11,6 +12,8 @@ public class PlayerData : MonoBehaviour
         updateInterface = FindFirstObjectByType<UpdateInterface>();
         if (updateInterface != null )
             updateInterface.UpdateHP(health / (float)maxHealth*100f);
+
+        
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class PlayerData : MonoBehaviour
         {
             health--;
             Debug.Log("Health:" + health);
+            damageSound.Play();
 
             if (updateInterface != null)
                 updateInterface.UpdateHP(health / (float)maxHealth * 100f);

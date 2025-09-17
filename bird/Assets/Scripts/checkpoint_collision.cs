@@ -4,6 +4,7 @@ public class checkpoint_collision : MonoBehaviour
 {
     public int Checkpoints {get; private set;}
     public AudioSource checkpointSound;
+    
 
     private UpdateInterface updateInterface;
     //public AudioClip checkpointClip;
@@ -12,6 +13,7 @@ public class checkpoint_collision : MonoBehaviour
     {
         checkpointSound = GetComponent<AudioSource>();
         updateInterface = FindFirstObjectByType<UpdateInterface>();
+
 
         CountCheckpoints();
 
