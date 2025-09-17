@@ -27,7 +27,7 @@ public class BGMfader : MonoBehaviour
                 fading = true;
             }
         }
-        if (player.health == 0 && !gameOverTriggered)
+        if ((player.health == 0 || cpc.Checkpoints == 0) && !gameOverTriggered)
             GameOverReset();
         else if (gameOverTriggered && player.health > 0 && cpc != null && cpc.Checkpoints <= CheckPointTrigger)
         {

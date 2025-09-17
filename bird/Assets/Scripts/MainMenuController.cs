@@ -13,6 +13,7 @@ public class MainMenuController : MonoBehaviour
     public GameObject CheckpointParent;
 
     private UIDocument _document;
+    public PlayerData player;
 
     private Label _menuLabel;
     private Button _startButton;
@@ -147,6 +148,18 @@ public class MainMenuController : MonoBehaviour
         StartCoroutine(LerpTimeScale(Time.timeScale, 1f));
     }
 
+    public void WinGame()
+    {
+        
+        
+            ShowMenu("Well Done", "Play Again");
+        
+        
+        
+
+    }
+
+
     private System.Collections.IEnumerator LerpTimeScale(float start, float end)
     {
         float t = 0f;
@@ -166,10 +179,9 @@ public class MainMenuController : MonoBehaviour
 
     private void OnStartButtonClicked(ClickEvent evt)
     {
-        if (_startButton.text == "Try Again?")
+        if (_startButton.text == "Try Again?" || _startButton.text == "Play Again")
         {
-            PlayerData player = FindFirstObjectByType<PlayerData>();
-            if (player != null)
+            
                 player.ResetPlayer();
 
             ResetCheckpoints();

@@ -50,6 +50,9 @@ public class checkpoint_collision : MonoBehaviour
                 updateInterface.UpdateCheckpoints(Checkpoints);
 
             other.gameObject.SetActive(false);
+
+            if (Checkpoints == 0)
+            { MainMenuController.Instance.WinGame(); }
         }
         
     }

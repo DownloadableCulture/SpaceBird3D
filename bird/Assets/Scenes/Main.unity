@@ -181,6 +181,7 @@ MonoBehaviour:
   FadeSpeed: 1
   TargetVolume: 1
   CheckPointTrigger: 5
+  player: {fileID: 2145106990}
 --- !u!114 &53958434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,6 +199,7 @@ MonoBehaviour:
   FadeSpeed: 1
   TargetVolume: 1
   CheckPointTrigger: 4
+  player: {fileID: 2145106990}
 --- !u!114 &53958435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +217,7 @@ MonoBehaviour:
   FadeSpeed: 1
   TargetVolume: 1
   CheckPointTrigger: 1
+  player: {fileID: 2145106990}
 --- !u!114 &53958436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +235,7 @@ MonoBehaviour:
   FadeSpeed: 1
   TargetVolume: 1
   CheckPointTrigger: 2
+  player: {fileID: 2145106990}
 --- !u!114 &53958437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +253,7 @@ MonoBehaviour:
   FadeSpeed: 1
   TargetVolume: 1
   CheckPointTrigger: 3
+  player: {fileID: 2145106990}
 --- !u!114 &53958438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,7 +282,7 @@ GameObject:
   - component: {fileID: 223870659}
   m_Layer: 0
   m_Name: Sub Bass
-  m_TagString: Untagged
+  m_TagString: MainOST
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -485,7 +490,7 @@ GameObject:
   - component: {fileID: 338464552}
   m_Layer: 0
   m_Name: Staccato Melody
-  m_TagString: Untagged
+  m_TagString: GameOverOST
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -614,7 +619,7 @@ GameObject:
   - component: {fileID: 346000610}
   m_Layer: 0
   m_Name: Resonance Melody
-  m_TagString: Untagged
+  m_TagString: MainOST
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -909,7 +914,7 @@ GameObject:
   - component: {fileID: 635742947}
   m_Layer: 0
   m_Name: Violin Melody
-  m_TagString: Untagged
+  m_TagString: MainOST
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1038,7 +1043,7 @@ GameObject:
   - component: {fileID: 638372166}
   m_Layer: 0
   m_Name: Horn Melody
-  m_TagString: Untagged
+  m_TagString: MainOST
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1782,7 +1787,7 @@ GameObject:
   - component: {fileID: 1228743519}
   m_Layer: 0
   m_Name: Strings Long
-  m_TagString: Untagged
+  m_TagString: MenuOST
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1972,6 +1977,7 @@ MonoBehaviour:
   Submit: {fileID: -4326742136740729511, guid: 31bca9444fed40049b4b83a1e9c475b1, type: 3}
   Navigate: {fileID: -7080064211662806119, guid: 31bca9444fed40049b4b83a1e9c475b1, type: 3}
   CheckpointParent: {fileID: 1185686971}
+  player: {fileID: 2145106990}
   timeLerpSpeed: 2
 --- !u!1001 &1458294912
 PrefabInstance:
@@ -2352,7 +2358,7 @@ GameObject:
   - component: {fileID: 1825163545}
   m_Layer: 0
   m_Name: Bass Strings
-  m_TagString: Untagged
+  m_TagString: MainOST
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2618,7 +2624,7 @@ GameObject:
   - component: {fileID: 2140390445}
   m_Layer: 0
   m_Name: Hihat
-  m_TagString: Untagged
+  m_TagString: MainOST
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Object
   - Checkpoint
+  - MainOST
+  - GameOverOST
+  - MenuOST
   layers:
   - Default
   - TransparentFX
