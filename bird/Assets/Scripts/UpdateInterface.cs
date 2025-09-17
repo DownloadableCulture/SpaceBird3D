@@ -7,9 +7,10 @@ public class UpdateInterface : MonoBehaviour
     public UIDocument gameInterface;
     private Label checkpoints;
     private ProgressBar hitPoints;
+    private VisualElement root;
     void Awake()
     {
-        var root = gameInterface.rootVisualElement;
+        root = gameInterface.rootVisualElement;
         checkpoints = root.Q<Label>("Checkpoints");
         hitPoints = root.Q<ProgressBar>("lives");
         
@@ -28,6 +29,8 @@ public class UpdateInterface : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Hide the interface if the menu is open
+        if (MainMenuController.Instance != null)
+            root.style.display = MainMenuController.Instance.MenuVisible ? DisplayStyle.None : DisplayStyle.Flex;
     }
 }
