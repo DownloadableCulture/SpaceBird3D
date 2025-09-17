@@ -37,6 +37,16 @@ public class PlayerData : MonoBehaviour
             {
                 MainMenuController.Instance.ShowMenu("Game Over!", "Try Again?");
             }
+
+            BGMfader[] allFaders = Object.FindObjectsByType<BGMfader>(FindObjectsSortMode.None);
+
+            foreach (var fader in allFaders)
+            {
+                if (fader.CompareTag("MainOST"))
+                {
+                    fader.FadeOut();
+                }
+            }
         }
         
     }
