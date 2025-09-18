@@ -8,3 +8,7 @@
 
 .unity-label {
 }
+
+.unity-progress-bar {
+    width: auto;
+}
